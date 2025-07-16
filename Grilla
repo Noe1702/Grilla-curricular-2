@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.4.2 (Linux)"/>
+	<meta name="created" content="2025-07-16T12:14:28.064954821"/>
+	<meta name="changed" content="2025-07-16T12:15:06.210929811"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+	</style>
+</head>
+<body lang="es-UY" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+&lt;!DOCTYPE html&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;html lang=&quot;es&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;meta
+charset=&quot;UTF-8&quot; /&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;title&gt;Malla
+Curricular Interactiva - Contador Público&lt;/title&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    body {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      font-family:
+sans-serif;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #fdf6ff;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      color: #333;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      padding: 20px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    h2 {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      color:
+#b36ea6;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    .semester {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      margin-bottom:
+30px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      border-left:
+4px solid #e0b3d3;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      padding-left:
+10px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    .subject {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      margin: 5px
+5px 5px 0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      padding: 8px
+12px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      border-radius:
+12px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #f9e6f2;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      color:
+#5a2e5e;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      display:
+inline-block;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      cursor:
+pointer;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      user-select:
+none;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      transition:
+background-color 0.3s, opacity 0.3s;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">   
+.subject.disabled {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #f4d9ea;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      opacity: 0.5;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      cursor:
+not-allowed;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">   
+.subject.completed {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+text-decoration: line-through;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #d8bfe9;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      opacity: 0.7;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    .controls {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      margin: 20px
+0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    button {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      margin-right:
+10px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      padding: 10px
+15px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      border: none;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      border-radius:
+8px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #d8bfe9;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      color:
+#5a2e5e;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      font-weight:
+bold;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      cursor:
+pointer;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    button:hover {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">     
+background-color: #c4a1db;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;h1&gt;Malla
+Curricular Interactiva - Contador Público&lt;/h1&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;div
+class=&quot;controls&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;button
+onclick=&quot;guardarProgreso()&quot;&gt;💾 Guardar
+progreso&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;button
+onclick=&quot;cargarProgreso()&quot;&gt;📂 Cargar progreso&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;button
+onclick=&quot;reiniciarProgreso()&quot;&gt;🔁 Reiniciar&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;div
+id=&quot;malla&quot;&gt;&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">  &lt;script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    const semestres
+= [</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Primer Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Introducción a la Microeconomía&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Conceptos
+Contables&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Cálculo
+I&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Administración y gestión de las Organizaciones I&quot;: []</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Segundo Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Civil&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Economía
+Descriptiva&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad General I&quot;: [&quot;Conceptos Contables&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Administración y Gestión de las Org. II&quot;:
+[&quot;Administración y gestión de las Organizaciones I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Ciencia
+Política&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Desarrollo y Bienestar&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Álgebra
+Lineal&quot;: []</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Tercer Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Introducción a la Estadística&quot;: [&quot;Cálculo I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad General II&quot;: [&quot;Contabilidad General I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Comercial&quot;: [&quot;Derecho Civil&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Procesos
+y Sistemas de Información&quot;: [&quot;Administración y gestión
+de las Organizaciones I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Macroeconomía I&quot;: [&quot;Introducción a la
+Microeconomía&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Taller
+de iniciación a la investigación&quot;: [&quot;4 materias
+aprobadas&quot;]</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Cuarto Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad General III&quot;: [&quot;Contabilidad General
+II&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Matemática Financiera&quot;: [&quot;Cálculo I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Legislación Laboral y Seguridad Social&quot;: [&quot;Derecho
+Civil&quot;, &quot;Conceptos Contables&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Societario&quot;: [&quot;Derecho Civil&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Economía
+circular&quot;: [&quot;10 materias aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Administración de Recursos Humanos&quot;: [&quot;Administración
+y Gestión de las Org. II&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Sistemas
+de Información&quot;: [&quot;Administración y gestión de las
+Organizaciones I&quot;, &quot;Contabilidad General I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Sociología de la Empresa y Management&quot;: [&quot;8 materias
+aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Sociología Contemporánea&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Sociología Económica&quot;: []</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Quinto Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Modelos
+y Sistemas de Costos&quot;: [&quot;Contabilidad General III&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Tributario&quot;: [&quot;Derecho Civil&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Ética
+y Ejercicio Profesional&quot;: [&quot;Contabilidad General II&quot;,
+&quot;Derecho Comercial&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;EFI
+Microcecea&quot;: [&quot;18 materias aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Taller
+de Ética y Responsabilidad Social&quot;: [&quot;Procesos y Sistemas
+de Información&quot;, &quot;Modelos y Sistemas de Costos&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;EFI:
+Cooperativas de trabajo y colectivos autogestionados&quot;: [&quot;18
+materias aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Seguros
+de Vida&quot;: [&quot;Matemática Financiera&quot;, &quot;Introducción
+a la Estadística&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Marketing
+Básico&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Análisis
+de datos en administración&quot;: [&quot;Introducción a la
+Estadística&quot;]</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Sexto Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad Superior I&quot;: [&quot;Contabilidad General
+III&quot;, &quot;Legislación Laboral y Seguridad Social&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Control
+Interno&quot;: [&quot;Contabilidad General III&quot;, &quot;Procesos
+y Sistemas de Información&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad Gerencial&quot;: [&quot;16 materias aprobadas&quot;,
+&quot;Modelos y Sistemas de Costos&quot;, &quot;Matemática
+Financiera&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Tributaria I&quot;: [&quot;Contabilidad General III&quot;,
+&quot;Derecho Tributario&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad de instituciones financieras no bancarias&quot;:
+[&quot;16 materias aprobadas&quot;, &quot;Contabilidad General III&quot;,
+&quot;Derecho Comercial&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Público&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;EFI
+- Costos para la Gestión de Emprendimientos Sociales y
+Comunitarios&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Marketing
+Estratégico&quot;: [&quot;Contabilidad Gerencial&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Comercio
+Internacional&quot;: [&quot;Modelos y Sistemas de Costos&quot;,
+&quot;Matemática Financiera&quot;, &quot;Derecho Comercial&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Introd.
+al emprendedurismo&quot;: [&quot;24 materias aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Economía
+y finanzas públicas&quot;: [&quot;Introducción a la Microeconomía&quot;,
+&quot;Economía Descriptiva&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Historia
+Económica del Uruguay&quot;: [],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Métodos
+Cuantitativos en Decisiones Gerenciales&quot;: [&quot;16 materias
+aprobadas&quot;, &quot;Introducción a la Estadística&quot;,
+&quot;Matemática Financiera&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Derecho
+Digital&quot;: [&quot;16 materias aprobadas&quot;, &quot;Derecho
+Comercial&quot;, &quot;Derecho Societario&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Modelos
+de Comportamiento Estratégico&quot;: [&quot;Introducción a la
+Estadística&quot;]</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">      {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        titulo:
+&quot;Séptimo Semestre&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        materias: {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Auditoria
+I&quot;: [&quot;16 materias aprobadas&quot;, &quot;Legislación
+Laboral y Seguridad Social&quot;, &quot;Control Interno&quot;,
+&quot;Contabilidad Superior I&quot;, &quot;Derecho Societario&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Tributaria II&quot;: [&quot;Tributaria I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Finanzas
+Corporativas&quot;: [&quot;18 materias aprobadas&quot;,
+&quot;Administración y gestión de las Organizaciones I&quot;,
+&quot;Matemática Financiera&quot;, &quot;Introducción a la
+Estadística&quot;, &quot;Contabilidad General III&quot;,
+&quot;Macroeconomía I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad Bancaria&quot;: [&quot;Modelos y Sistemas de
+Costos&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Práctica
+Profesional Inicial&quot;: [&quot;Tributaria II&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;EFI
+- Emprendimientos productivos en contexto de encierro&quot;: [&quot;18
+materias aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad Superior II&quot;: [&quot;Contabilidad Superior
+I&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Marketing
+de Servicios&quot;: [&quot;Marketing Estratégico&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">          &quot;Marketing
+Digital&quot;: [&quot;Marketing Estratégico&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Comportamiento Organizacional&quot;: [&quot;17 materias
+aprobadas&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">         
+&quot;Contabilidad Social y Ambie</p>
+</body>
+</html>
